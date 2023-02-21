@@ -17,10 +17,10 @@ def on_message(ws, message):
     python_dict = json.loads(message)
     token = python_dict['token']
     event_name = python_dict['event_name']
-    user_id = "" #Insert your unique user id between quotes
-    auth_token = "" #Insert your unique auth token between quotes
-    chat_id = "" #Insert your unique chat id between quotes
-    device_id = "" #Insert your unique device id between quotes
+    user_id = "63e65bc88ee06f617f8306bb" #Insert your unique user id between quotes
+    auth_token = "3e4d3834-2765-442f-b93b-3941df96fc25" #Insert your unique auth token between quotes
+    chat_id = "63e65bc88ee06f617f8306ba" #Insert your unique chat id between quotes
+    device_id = "E3DAA0BB-CE5D-4691-AE8E-D55F7A318924" #Insert your unique device id between quotes
     print(f"Event name {event_name}")
     if event_name == "init":
         ws.send('{"event_name":"chat_screen","payload":{},"token":"'+str(token)+'","auth":{"user_id":"'+str(user_id)+'","auth_token":"'+str(auth_token)+'","device_id":"'+str(device_id)+'"}}')
